@@ -15,19 +15,24 @@ export class IncomeController {
   getList (@Body() listDto: ListDTO) {
     return this.incomeService.getList(listDto)
   }
+
+  @Post('getDetail')
+  getDetail (@Body() idDto: IDDTO) {
+    return this.incomeService.getDetail(idDto)
+  }
   
   @Post('create')
-  createPay (@Body() createDto: CreateDTO) {
-    return this.incomeService.createPay(createDto)
+  createIncome (@Body() createDto: CreateDTO) {
+    return this.incomeService.createIncome(createDto)
   }
 
   @Post('edit')
-  editPay (@Body() editDto: EditDTO) {
-    return this.incomeService.editPay(editDto)
+  editIncome (@Body() editDto: EditDTO) {
+    return this.incomeService.editIncome(editDto)
   }
 
   @Delete(':id')
-  deletePay (@Param() idDto: IDDTO) {
-    return this.incomeService.deletePay(idDto)
+  deleteIncome (@Param() idDto: IDDTO) {
+    return this.incomeService.deleteIncome(idDto)
   }
 }

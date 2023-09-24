@@ -40,7 +40,7 @@ export class Income {
     incomeMoney: number;
 
     // 收入备注
-    @Column('text')
+    @Column({ nullable: true, type: 'text' })
     incomeRemark: string;
 
     // 用户id

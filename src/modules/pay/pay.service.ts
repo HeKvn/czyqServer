@@ -83,7 +83,7 @@ export class PayService {
     const pay = new Pay()
 
     pay.payType = createDto.payType
-    pay.payMoney = createDto.payMoneny
+    pay.payMoney = createDto.payMoney
     pay.userID = createDto.userID
     pay.payRemark = createDto.payRemark || null
 
@@ -96,7 +96,7 @@ export class PayService {
     const { id, userID } = editDto
     let payToUpdate = await this.payRepository.findOne({ where: { id, userID } })
 
-    payToUpdate.payMoney = editDto.payMoneny
+    payToUpdate.payMoney = editDto.payMoney
     payToUpdate.payType = editDto.payType
     payToUpdate.payRemark = editDto.payRemark || null
 
