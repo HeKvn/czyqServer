@@ -9,7 +9,7 @@ import { IncomeModule } from './modules/income/income.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '175.178.9.4',
+      host: 'localhost',
       port: 3306,
       username: 'jizhang',
       password: 'jizhang11',
